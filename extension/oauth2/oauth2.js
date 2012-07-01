@@ -27,8 +27,8 @@ var OAuth2 = function(adapterName, config, callback) {
   var that = this;
   OAuth2.loadAdapter(adapterName, function() {
     that.adapter = OAuth2.adapters[adapterName];
-    if (config == OAuth2.FINISH) {
-      that.finishAuth();
+    if (config.authorized_url) {
+      that.finishAuth(config.authorized_url);
       return;
     } else if (config) {
       that.set('clientId', config.client_id);
@@ -155,9 +155,9 @@ OAuth2.prototype.refreshAccessToken = function(refreshToken, callback) {
  * Extracts authorizationCode from the URL and makes a request to the last
  * leg of the OAuth 2.0 process.
 */
-OAuth2.prototype.finishAuth = function() {
+OAuth2.prototype.finishAuth = function(authorized_url) {
   var that = this;
-  var authorizationCode = that.adapter.parseAuthorizationCode(window.location.href);
+  var authorizationCode = that.adapter.parseAuthorizationCode(authorized_url);
   console.log(authorizationCode);
   that.getAccessAndRefreshTokens(authorizationCode, function(at, rt, exp) {
     that.set('accessToken', at);
@@ -168,6 +168,7 @@ OAuth2.prototype.finishAuth = function() {
     }
     that.set('accessTokenDate', (new Date()).valueOf());
 
+    /*
     // Loop through existing extension views and excute any stored callbacks.
     var views = chrome.extension.getViews();
     for (var i = 0, view; view = views[i]; i++) {
@@ -184,6 +185,7 @@ OAuth2.prototype.finishAuth = function() {
     // The following works around bug: crbug.com/84201
     window.open('', '_self', '');
     window.close();
+    */
   });
 };
 

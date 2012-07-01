@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="http://webos-goodies.jp/operatomobile">
+	<name>Opera to Mobile</name>
+	<description>A port of &quot;Chrome to Mobile&quot; chrome extension.</description>
+  	<author href="http://webos-goodies.jp" email="support@webos-goodies.jp">sourcewalker</author>
+    <content src="background.html" encoding="utf-8" type="text/html" />
+  	<icon src="images/logo.png" />
+    <access origin="https://accounts.google.com" />
+    <access origin="https://www.googleapis.com" />
+    <access origin="https://www.google.com" />
+</widget>

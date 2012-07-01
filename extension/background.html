@@ -6,8 +6,30 @@
 -->
 
 <html>
-  <head>
-    <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript" src="js/background.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <script>
+    window.addEventListener("load", function(){
+      var theButton;
+      var ToolbarUIItemProperties = {
+        title: "Opera to Mobile",
+        icon: "images/toolbar.png",
+        popup: {
+          href: "popup.html",
+          width: 450,
+          height: 200
+        }
+      }
+      theButton = opera.contexts.toolbar.createItem(ToolbarUIItemProperties);
+      opera.contexts.toolbar.addItem(theButton);
+    }, false);
+  </script>
+  <script type="text/javascript" src="js/stub.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="oauth2/oauth2.js"></script>
+  <script type="text/javascript" src="js/background.js"></script>
+  <script type="text/javascript" src="js/background_ex.js"></script>
+</head>
+<body>
+</body>
 </html>

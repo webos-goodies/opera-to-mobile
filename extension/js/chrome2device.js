@@ -73,8 +73,10 @@ function initChrome2Device() {
 function createOAuth2Client() {
   console.log("createOAuth2Client: Creating OAuth2 client");
   googleAuth = new OAuth2('google', {
-    client_id: '648230873233.apps.googleusercontent.com',
-    client_secret: 'M5yYVtNmPGr3lEedtWJ7-w4F',
+    //client_id: '648230873233.apps.googleusercontent.com',
+    //client_secret: 'M5yYVtNmPGr3lEedtWJ7-w4F',
+    client_id: '538883014004.apps.googleusercontent.com',
+    client_secret: 'IrQlGzPtF2yHyGFTCk8OOOIk',
     api_scope: 'https://www.googleapis.com/auth/cloudprint https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile'
   });
 }
@@ -470,7 +472,8 @@ function sendDataWithCurrentlySelectedDeviceId() {
     if (tab.url.match(/^http[s]?:\/\/maps\.google\./) ||
         tab.url.match(/^http[s]?:\/\/www\.google\.[a-z]{2,3}(\.[a-z]{2})\/maps/)) {
         console.log('sendDataWithCurrentlySelectedDeviceId-inner: Loading content script for Google Maps');
-        chrome.tabs.executeScript(tab.id, {file: "js/content_script.js"});
+        //chrome.tabs.executeScript(tab.id, {file: "js/content_script.js"});
+        opera.extension.postMessage({type:'retrieveUrl'});
       } else {
         var data = {
             'url': tab.url,

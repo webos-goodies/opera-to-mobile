@@ -5,7 +5,7 @@
 */
 
 body {
-  direction: __MSG_@@bidi_dir__;
+  /*direction: __MSG_@@bidi_dir__;*/
   min-width: 400px;
   font: menu;
   overflow: hidden;
@@ -32,8 +32,8 @@ div#welcomeHeaderDiv {
   overflow: hidden;
   padding-top: 0.0em;
   padding-bottom: 0.0em;
-  padding-__MSG_@@bidi_start_edge__: 0.0em;
-  padding-__MSG_@@bidi_end_edge__: 0.0em;
+  padding-left: 0.0em;
+  padding-right: 0.0em;
   position: relative;
 }
 
@@ -63,8 +63,8 @@ div#messageDiv {
   overflow: hidden;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
-  padding-__MSG_@@bidi_start_edge__: 0.0em;
-  padding-__MSG_@@bidi_end_edge__: 0.0em;
+  padding-left: 0.0em;
+  padding-right: 0.0em;
   position: relative;
 }
 
@@ -72,8 +72,8 @@ div#deviceListDiv {
   overflow: hidden;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
-  padding-__MSG_@@bidi_start_edge__: 0.0em;
-  padding-__MSG_@@bidi_end_edge__: 0.0em;
+  padding-left: 0.0em;
+  padding-right: 0.0em;
   position: relative;
 }
 
@@ -81,8 +81,8 @@ div#includeSnapshotDiv {
   overflow: hidden;
   padding-top: 0.7em;
   padding-bottom: 0.2em;
-  padding-__MSG_@@bidi_start_edge__: 0.0em;
-  padding-__MSG_@@bidi_end_edge__: 0.0em;
+  padding-left: 0.0em;
+  padding-right: 0.0em;
   position: relative;
 
 }

@@ -19,18 +19,21 @@ var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-23999655-3']);
 
 (function() {
+  // Comment out to avoid messing original author's logs.
+  /*
   var ga = document.createElement('script');
   ga.type = 'text/javascript';
   ga.async = true;
   ga.src = 'https://ssl.google-analytics.com/ga.js';
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(ga, s);
+  */
 })();
 
 function trackPageview() {
-  _gaq.push(['_trackPageview']);
+  //_gaq.push(['_trackPageview']);
 }
 
 function trackEvent(data) {
-  _gaq.push(['_trackEvent'].concat(data));
+  //_gaq.push(['_trackEvent'].concat(data));
 }
