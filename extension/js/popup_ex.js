@@ -14,3 +14,13 @@ function onInvoke(e) {
     f.apply(null, e.data.args);
   }
 }
+
+function initPopup() {
+  var tab = opera.extension.bgProcess.opera.extension.tabs.getSelected();
+  if(tab.url && /^(?:https?|ftp):/.test(tab.url)) {
+    initChrome2Device();
+  } else {
+    $("#welcomeHeaderDiv").removeClass("hidden");
+    $("#welcomeHeaderDiv").html('Only http(s): or ftp: can be sent.');
+  }
+}
