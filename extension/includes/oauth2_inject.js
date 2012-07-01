@@ -1,5 +1,5 @@
 // ==UserScript==
-// @include http://www.google.com/robots.txt*
+// @include http://webos-goodies.jp/misc/operatomobile.html*
 // ==/UserScript==
 
 /*
@@ -18,9 +18,13 @@
  * limitations under the License.
  */
 
-opera.extension.postMessage({
-  type: 'authorized',
-  data: window.location.href
-});
+if (document.location.href.indexOf('http://webos-goodies.jp/misc/operatomobile.html') == 0) {
 
-window.close();
+  opera.extension.postMessage({
+    type: 'authorized',
+    data: window.location.href
+  });
+
+  window.close();
+
+}

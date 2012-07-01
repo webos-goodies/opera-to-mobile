@@ -1,7 +1,7 @@
 Opera to Mobile extension
 =========================
 
-This is an Opera version of "Chrome to Mobile" chrome extension. You can send a current url to Chrome for Android/iOS from Opera for desktop.
+This is an Opera extension version of "Chrome to Mobile" chrome extension. You can send a current url to Chrome for Android/iOS from Opera for desktop.
 
 See below for details.
 

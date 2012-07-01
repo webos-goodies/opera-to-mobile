@@ -11,7 +11,7 @@ response_type=code'
   },
 
   redirectURL: function(config) {
-    return 'http://www.google.com/robots.txt';
+    return 'http://webos-goodies.jp/misc/operatomobile.html';
   },
 
   parseAuthorizationCode: function(url) {
